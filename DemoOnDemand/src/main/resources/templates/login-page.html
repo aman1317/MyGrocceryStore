@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First HTML Page</title>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to My Website</h1>
+    </header>
+
+   Hello, welcome to Walmart!!!
+   
+   <div th:if="${param.error}">
+	   <span>Sorry u entered wrong Credntials hehehehheheheh...</span>
+   </div>
+   
+   <div th:if="${param.logout}"> 
+	   <span> Le bhai Kar dia logout,,,, Hoja khush.</span>
+   </div>
+   
+   
+ <form action="#" th:action="@{/authenticateUser}" method="POST">
+	 
+	 <!--we need to give as exact name for both  username and password as mentioned in SpringBoot,
+	 then only springboot will be able to fetch these values.-->
+	 
+	 <p> we need to give as exact name(name="username" and name="password") for both  username and password as mentioned in SpringBoot,
+	 then only springboot will be able to fetch these values.</p>
+	 
+ 		UserName please::  <input type="text" name="username"/> 
+		Password please::  <input type="password" name="password"/> 
+		
+		<input type="submit" Value="Login to Walmart">
+		
+ </form>
+   
+   
+   
+   
+   
+   
+   
+    <footer>
+        <p>&copy; 2023 My Website. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

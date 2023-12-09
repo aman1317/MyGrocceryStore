@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First HTML Page</title>
+    <style>
+		.error{
+			color:red;
+		}
+	</style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to My Website</h1>
+    </header>
+
+
+<form th:action="@{/processStudentForm}" th:object="${category}" method="POST">
+	
+	Category Name : <input type="text" th:field = "*{categoryName}"/>
+	
+	<span th:if="${#fields.hasErrors('categoryName')}"
+	th:errors="*{categoryName}" 
+	class="error"> </span>
+	
+	Category Desc : <input type="text" th:field = "*{categoryDesc}"/>
+	
+	<span th:if="${#fields.hasErrors('categoryDesc')}"
+	th:errors="*{categoryDesc}" 
+	class="error"> </span>
+	
+	
+	
+	<input type="submit" value="Submit">
+	
+</form>
+
+	<p th:text="'Time on the server is' +${wifeName}"/>
+
+    <footer>
+        <p>&copy; 2023 My Website. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

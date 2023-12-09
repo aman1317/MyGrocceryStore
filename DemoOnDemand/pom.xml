@@ -30,7 +30,12 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
+		
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-data-rest</artifactId>
+		</dependency>
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -38,12 +43,20 @@
 		</dependency>
 		
 		
+		
 		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-security -->
 		<dependency>
 		    <groupId>org.springframework.boot</groupId>
 		    <artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
-	
+		
+		
+		    <!-- Spring Boot Starter Validation -->
+			 <dependency>
+		        <groupId>org.springframework.boot</groupId>
+		        <artifactId>spring-boot-starter-validation</artifactId>
+		    </dependency>
+
 		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa --> 
 			<dependency>
 		    <groupId>org.springframework.boot</groupId>
@@ -68,10 +81,10 @@
         	
 		
 		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-thymeleaf -->
-	<!--	<dependency>
+		<dependency>
 		    <groupId>org.springframework.boot</groupId>
 		    <artifactId>spring-boot-starter-thymeleaf</artifactId>
-		</dependency>-->
+		</dependency>
 
  		<!-- Spring Boot DevTools -->
 	    <dependency>
@@ -87,7 +100,11 @@
 	        <artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 
-
+   <!-- Thymeleaf Security Dialect -->
+        <dependency>
+            <groupId>org.thymeleaf.extras</groupId>
+            <artifactId>thymeleaf-extras-springsecurity6</artifactId>
+        </dependency>
 
 	</dependencies>
 
