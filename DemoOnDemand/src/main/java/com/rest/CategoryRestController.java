@@ -31,6 +31,7 @@ import  com.walmart.service.CategoryService;
   
   @Autowired CategoryRestController(CategoryService categoryService) {
   this.categoryService=categoryService; 
+  System.out.println("hello");
   }
   
   
